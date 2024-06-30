@@ -26,7 +26,7 @@ Vagrant.configure("2") do |config|
     export VAULT_PASSWORD=#{`op read "op://Security/ansible-vault inqwise-stg/password"`.strip!}
     echo "$VAULT_PASSWORD" > vault_password
     export ANSIBLE_VERBOSITY=0
-    bash main.sh -e "private_dns=loki discord_message_owner_name=#{Etc.getpwuid(Process.uid).name} aws_iam_role=boundable-role" -r "#{AWS_REGION}"
+    bash main.sh -e "private_dns=loki discord_message_owner_name=#{Etc.getpwuid(Process.uid).name} aws_iam_role=loki-role" -r "#{AWS_REGION}"
   SHELL
 
   config.vm.provider :aws do |aws, override|
