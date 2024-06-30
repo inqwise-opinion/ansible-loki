@@ -43,8 +43,8 @@ Vagrant.configure("2") do |config|
     override.vm.synced_folder '../ansible-common-collection', '/vagrant/ansible-galaxy', type: :rsync, rsync__exclude: '.git/', disabled: false
     
     aws.region = AWS_REGION
-    aws.security_groups = ["sg-0e11a618872a5a387","sg-03cdabee5468ed30b"]
-        # public-ssh, boundable-worker
+    aws.security_groups = ["sg-0e11a618872a5a387","sg-0fb6558f0dd742c1e"]
+        # public-ssh, loki
     aws.ami = "ami-0f30c5fd99995315b"
     aws.instance_type = "t4g.small"
     aws.subnet_id = "subnet-0f46c97c53ea11e2e"
