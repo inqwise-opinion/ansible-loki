@@ -1,3 +1,1 @@
 environment_name: opinion-prod
-telegraf_config_uri: https://internal-opinion.s3.il-central-1.amazonaws.com/telegraf/loki-telegraf.config
-loki_base_url: http://loki.opinion-stg.local:3100

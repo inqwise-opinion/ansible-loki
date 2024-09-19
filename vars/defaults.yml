@@ -3,6 +3,4 @@ discord_webhook: https://discord.com/api/webhooks/{{ discord_message_webhook_id 
 discord_channel: "#notifications"
 private_dns: loki
 private_domain: opinion-stg.local
-app_user: "loki"
-app_group: "{{ loki_user }}"
-private_ip: "{{ ansible_default_ipv4['address'] }}"
+private_ip: "{{ ansible_default_ipv4.address }}"
